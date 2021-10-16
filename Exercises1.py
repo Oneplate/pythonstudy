@@ -48,6 +48,15 @@ def name():
     print ("Your name is: ", fullname)
     print ("Your live in: ", place)
 
+def inches_to_feet(inches):
+    if inches.isdigit():
+        inc = int(inches)
+        feet = inc//12
+        extra = inc%12
+        print(inc, " inches is ", feet, " feet and ", extra, " inches.")
+    else:
+        print ("NO STRING OR NEGATIVE INPUT ALLOWED")
+        
 print("############################")
 print("#      Function manual     #")
 print("#       h for hello()      #")
@@ -57,6 +66,7 @@ print("#     F for FtoC(temp)     #")
 print("#     C for CtoF(temp)     #")
 print("#      Also q for quit     #")
 print("#       n for name()       #")
+print("#  i for inches_to_feet()  #")
 print("############################")
 
 while True:
@@ -78,6 +88,9 @@ while True:
         CtoF(b)
     elif a == 'n':
         name()
+    elif a == 'i':
+        b = input()
+        inches_to_feet(b)
     elif a == 'q':
         break
     else:
