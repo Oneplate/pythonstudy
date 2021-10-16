@@ -2,24 +2,41 @@ def hello():
     print ("Hello, world!")
 
 def areacircle(radius):
-    area = 3.14159 * radius**2
-    print("The area of a circle of radius", radius, " is ", area)
-
+    if radius.isdigit():
+        radius = float(radius)
+        area = 3.14159 * radius**2
+        print("The area of a circle of radius", radius, " is ", area)
+    else:
+        print("NO STRING INPUT ALLOWED")
+        
 def areatriangle(b,h):
-    area = 0.5*b*h
-    print("The area of a triangle with botton of ",b, " and height of ", h, " is ", area)
-
+    if (b.isdigit() and h.isdigit()):
+        b = float(b)
+        h = float(h)
+        area = 0.5*b*h
+        print("The area of a triangle with botton of ",b, " and height of ", h, " is ", area)
+    else:
+        print("NO STRING INPUT ALLOWED")
+        
 def FtoC (temp):
     # 5*(F-32)/9 = C #
-    newtemp = 5*(temp-32)/9
-    print ("The Fahrenhit temperature", temp, " is eqyuvalent to ", newtemp, end=' ')
-    print (" degree Celcius")
+    if temp.isdigit():
+        temp = float(temp)
+        newtemp = 5*(temp-32)/9
+        print ("The Fahrenhit temperature", temp, " is eqyuvalent to ", newtemp, end=' ')
+        print (" degree Celcius")
+    else:
+        print("NO STRING INPUT ALLOWED")
 
 def CtoF (temp):
     # (9*C/5) + 32 = F #
-    newtemp = (9*temp/5)+32
-    print ("The Celcius temprtature", temp, " is equivalent to ", newtemp, end=' ')
-    print (" degree Fahrenheit")
+    if temp.isdigit():
+        temp = float(temp)
+        newtemp = (9*temp/5)+32
+        print ("The Celcius temprtature", temp, " is equivalent to ", newtemp, end=' ')
+        print (" degree Fahrenheit")
+    else:
+        print("NO STRING INPUT ALLOWED")
 
 def name():
     fname = input("Enter your first name: ")
@@ -48,17 +65,17 @@ while True:
         hello()
     elif a == 'c':
         b = input()
-        areacircle(float(b))
+        areacircle(b)
     elif a == 't':
         b = input()
         c = input()
-        areatriangle(float(b),float(c))
+        areatriangle(b,c)
     elif a == 'F':
         b = input()
-        FtoC(float(b))
+        FtoC(b)
     elif a == 'C':
         b = input()
-        CtoF(float(b))
+        CtoF(b)
     elif a == 'n':
         name()
     elif a == 'q':
