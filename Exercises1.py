@@ -56,14 +56,29 @@ def inches_to_feet(inches):
         print(inc, " inches is ", feet, " feet and ", extra, " inches.")
     else:
         print ("NO STRING OR NEGATIVE INPUT ALLOWED")
-
+"""
 def count_down():
     i = 0
     while i <= 9:
         print (10-i, end=' ')
         i = i+1
     print("BLASTOFF!")
+"""
 
+def count_down(): # for version
+    i = 0
+    for i in range(0,9,1):
+        print(10-i, end = ' ')
+    print("BLASTOFF!")
+
+def favorite():
+    my_toy = input("What is my favorite toy? ")
+     # print("Your favorite toy is", my-toy)
+# Errors:
+# 1. Indentation was insufficient
+# 2. Mismatch of variable name
+    print("Your favotite toy is ",my_toy)
+    
 print("############################")
 print("#      Function manual     #")
 print("#       h for hello()      #")
@@ -75,6 +90,7 @@ print("#      Also q for quit     #")
 print("#       n for name()       #")
 print("#  i for inches_to_feet()  #")
 print("#    o for count_down()    #")
+print("#     f for favorite()     #")
 print("############################")
 
 while True:
@@ -101,6 +117,8 @@ while True:
         inches_to_feet(b)
     elif a == 'o':
         count_down()
+    elif a == 'f':
+        favorite()
     elif a == 'q':
         break
     else:
