@@ -56,7 +56,14 @@ def inches_to_feet(inches):
         print(inc, " inches is ", feet, " feet and ", extra, " inches.")
     else:
         print ("NO STRING OR NEGATIVE INPUT ALLOWED")
-        
+
+def count_down():
+    i = 0
+    while i <= 9:
+        print (10-i, end=' ')
+        i = i+1
+    print("BLASTOFF!")
+
 print("############################")
 print("#      Function manual     #")
 print("#       h for hello()      #")
@@ -67,6 +74,7 @@ print("#     C for CtoF(temp)     #")
 print("#      Also q for quit     #")
 print("#       n for name()       #")
 print("#  i for inches_to_feet()  #")
+print("#    o for count_down()    #")
 print("############################")
 
 while True:
@@ -91,6 +99,8 @@ while True:
     elif a == 'i':
         b = input()
         inches_to_feet(b)
+    elif a == 'o':
+        count_down()
     elif a == 'q':
         break
     else:
