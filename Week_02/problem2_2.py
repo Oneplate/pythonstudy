@@ -1,0 +1,10 @@
+def problem2_2(mylis):
+    print(mylis)
+    print(mylis[0])
+    print(mylis[-1])
+    print(mylis[3:5])
+    print(mylis[0:3])
+    print(mylis[3:])
+    print(len(mylis))
+    mylis.append("z")
+    print(mylis)
